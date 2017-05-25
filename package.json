@@ -1,0 +1,26 @@
+{
+  "name": "identity",
+  "version": "1.0.0",
+  "description": "identity management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krvikash35/identity.git"
+  },
+  "author": "vikash kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krvikash35/identity/issues"
+  },
+  "homepage": "https://github.com/krvikash35/identity#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mongodb": "^2.2.27"
+  },
+  "devDependencies": {
+    "tape": "^4.6.3"
+  }
+}
