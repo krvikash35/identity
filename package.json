@@ -4,7 +4,9 @@
   "description": "identity management",
   "main": "index.js",
   "scripts": {
-    "test": "tap test/*.js "
+    "test": "set NODE_PATH=.||export NODE_PATH=. & tap test/*.js --cov --coverage-report=lcov",
+    "start": "",
+    "dev": "set NODE_PATH=.||export NODE_PATH=. & node index.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
   },
   "devDependencies": {
     "blue-tape": "^1.0.0",
+    "sinon": "^2.3.1",
     "tap": "^10.3.2"
   }
 }
