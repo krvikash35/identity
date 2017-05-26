@@ -4,7 +4,7 @@
   "description": "identity management",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tap test/*.js "
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "mongodb": "^2.2.27"
   },
   "devDependencies": {
-    "tape": "^4.6.3"
+    "blue-tape": "^1.0.0",
+    "tap": "^10.3.2"
   }
 }

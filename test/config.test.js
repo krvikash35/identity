@@ -1,10 +1,5 @@
-var test = require('tape'); 
-var assert = require('assert');
+var tap = require('tap'); 
 var config = require('../config/identity.config');
 
-test("config should have defined connUrl", t => {
-    t.doesNotEqual(config.db.connUrl, null);
-    t.test()
-    t.end()
-    assert.
-})
+tap.true(config.db.connUrl, "config should have db url");
+tap.type(config.db.connOpt, Object, "config should have db connection option object");

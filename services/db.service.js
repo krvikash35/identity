@@ -1,7 +1,8 @@
 var mongoCli = require('mongodb').MongoClient;
 const config = require('../config/identity.config');
 
-const dburl = config.db.connOpt;
+const dburl = config.db.connUrl;
+const dbopt = config.db.connOpt;
 var db = null;
 
 
@@ -10,7 +11,7 @@ var getConnection = function(){
         return db;
     }
     return db = new Promise( (resolve, reject) =>{
-        mongoCli.connect(dburl, (err, db){
+        mongoCli.connect(dburl, dbopt, (err, db)=>{
             if ( err ){
                 db = null;
                 return reject(err);
