@@ -4,9 +4,9 @@
   "description": "identity management",
   "main": "index.js",
   "scripts": {
-    "test": "set NODE_PATH=.||export NODE_PATH=. & tap test/*.js --cov --coverage-report=lcov",
+    "test": "set NODE_PATH=.||export NODE_PATH=. & tap test/*.js --cov",
     "start": "",
-    "dev": "set NODE_PATH=.||export NODE_PATH=. & node index.js"
+    "dev": "set NODE_PATH=.||export NODE_PATH=.  & node index.js"
   },
   "repository": {
     "type": "git",
@@ -20,10 +20,10 @@
   "homepage": "https://github.com/krvikash35/identity#readme",
   "dependencies": {
     "express": "^4.15.3",
+    "got": "^6.7.1",
     "mongodb": "^2.2.27"
   },
   "devDependencies": {
-    "blue-tape": "^1.0.0",
     "sinon": "^2.3.1",
     "tap": "^10.3.2"
   }
