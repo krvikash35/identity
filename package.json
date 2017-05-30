@@ -6,7 +6,9 @@
   "scripts": {
     "test": "set NODE_PATH=.||export NODE_PATH=. & tap test/*.js --cov",
     "start": "",
-    "dev": "set NODE_PATH=.||export NODE_PATH=.  & node index.js"
+    "sass": "",
+    "nodemon": "nodemon --ignore test --ignore public  index.js | bunyan",
+    "dev": "cross-env NODE_PATH=. concurrently --kill-others  \"npm run nodemon\" "
   },
   "repository": {
     "type": "git",
@@ -19,11 +21,16 @@
   },
   "homepage": "https://github.com/krvikash35/identity#readme",
   "dependencies": {
+    "bunyan": "^1.8.10",
     "express": "^4.15.3",
     "got": "^6.7.1",
     "mongodb": "^2.2.27"
   },
   "devDependencies": {
+    "concurrently": "^3.4.0",
+    "cross-env": "^5.0.0",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0",
     "sinon": "^2.3.1",
     "tap": "^10.3.2"
   }
