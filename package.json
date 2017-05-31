@@ -8,7 +8,7 @@
     "start": "",
     "sass": "",
     "nodemon": "nodemon --ignore test --ignore public  index.js | bunyan",
-    "dev": "cross-env NODE_PATH=. concurrently --kill-others  \"npm run nodemon\" "
+    "dev": "cross-env NODE_PATH=. NODE_ENV=DEV concurrently --kill-others  \"npm run nodemon\" "
   },
   "repository": {
     "type": "git",
